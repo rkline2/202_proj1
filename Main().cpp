@@ -23,9 +23,16 @@ int main()
 }
 
 void startGame() {
+    const int MAXCHAR = 80;
+    const int MAXROW = 4;
+    const int MAXCOL = 4;
+    const int MAXELMNT = 15;
+    int elmntCount = 0;
     int selectBoard = 2;
-    char fileName[80] = {};
-    char var[80] = {};
+    char fileName[MAXCHAR] = {};
+    int board[MAXROW][MAXCOL] = {{},{},{},{}};
+    int boardRow = 0;
+    int boardCol = 0;
     cout << "Welcome to the Fifteen Game" << endl;
     do {
         cout << "Would you like to load a board? \n"
@@ -35,15 +42,30 @@ void startGame() {
     if (selectBoard == 1) {
         cout << "What is the file name? " << endl;
         cin >> fileName;
+        /*I would honestly put all of this into another function*/
         ifstream inputStream;
         inputStream.open(fileName);
-        while (inputStream >> var) {
-            /*Create a 2D-array of the file. You 
-            can probably just do this with pointers 
-            instaed of L1 = L2 bs*/
-            cout << var << endl;
+        while (elmntCount <= MAXELMNT) {
+            if (boardCol < MAXCOL && boardRow < MAXROW) {
+                inputStream >> board[boardRow][boardCol];
+                boardCol++;
+            }
+            else if (boardCol >= MAXCOL && boardRow < MAXROW) {
+                boardRow++;
+                boardCol = 0;
+                inputStream >> board[boardRow][boardCol];
+                boardCol++;
+            }
+            elmntCount++;
         }
         inputStream.close();
+        /*This checks to make sure everythings a-okay*/
+        for (int x = 0; x < MAXROW; x++) {
+            for(int y = 0;  y < MAXCOL; y++)
+            {
+                cout << board[x][y] << endl;
+            }
+        }
 
     }
     else {
