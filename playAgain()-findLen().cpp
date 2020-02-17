@@ -8,6 +8,9 @@ const char YES = 'y';
 const char NO = 'n';
 const char WRONGVAL = '!';
 
+int findLen(char list[MAXELMNT]);
+char playAgain();
+
 char playAgain() {
     char ans[MAXELMNT] = { WRONGVAL };
     while (ans[0] == WRONGVAL) {
@@ -41,3 +44,12 @@ char playAgain() {
     }
     return ans[0];
 }
+
+int findLen(char list[MAXELMNT]) {
+    int index = 0;
+    while (list[index] != 0) {
+        index++;
+    }
+    return index;
+}
+
