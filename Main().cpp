@@ -89,31 +89,6 @@ void startGame(int board[MAXROW][MAXCOL]) {
     }
 }
 
-char playAgain() {
-    char ans = WRONGVAL;
-    while (ans == WRONGVAL) {
-        cout << "Play again? (y/n): ";
-        cin >> ans;
-        switch (ans) {
-        case 'y':
-        case 'Y':
-            cout << "Loading a new game..." << endl;
-            ans = 'y';
-            break;
-        case 'n':
-        case 'N':
-            cout << "Thank you for playing the game of fifteen!" << endl;
-            ans = 'n';
-            break;
-
-        default:
-            cout << "Incorrect responce please try again" << endl;
-            ans = WRONGVAL;
-            break;
-        }
-    }
-    return ans;
-}
 
 void getBoard(char fileName[], int size, int board[MAXROW][MAXCOL]) {
     int elmntCount = 0;
