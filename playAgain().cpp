@@ -1,3 +1,13 @@
+const int MAXCHAR = 80;
+const int MAXROW = 4;
+const int MAXCOL = 4;
+const int MAXELMNT = 15;
+const char WINNER = 'W';
+const char LOSER = 'L';
+const char YES = 'y';
+const char NO = 'n';
+const char WRONGVAL = '!';
+
 char playAgain() {
     char ans[MAXELMNT] = { WRONGVAL };
     while (ans[0] == WRONGVAL) {
