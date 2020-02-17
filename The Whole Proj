@@ -36,12 +36,11 @@ int main()
 {
     
     int board[MAXROW][MAXCOL] = { {1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,0,15} };
-    do {
+    char anotherGame = YES;
+    while (anotherGame == YES) {
         playGame(board);
-    } while (playAgain() == YES);
-    char boom = playAgain();
-    cout << boom << endl;
-
+        anotherGame = playAgain();
+    }
     return 0;
 }
 
