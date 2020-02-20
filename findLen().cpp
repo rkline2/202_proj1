@@ -9,9 +9,18 @@ const char NO = 'n';
 const char WRONGVAL = '!';
 
 int findLen(char list[MAXELMNT]);
+int findLen(int list[MAXELMNT]);
 
 
 int findLen(char list[MAXELMNT]) {
+    int index = 0;
+    while (list[index] != 0) {
+        index++;
+    }
+    return index;
+}
+
+int findLen(int list[MAXELMNT]) {
     int index = 0;
     while (list[index] != 0) {
         index++;
