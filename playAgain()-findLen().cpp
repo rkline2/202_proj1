@@ -7,6 +7,7 @@ const char LOSER = 'L';
 const char YES = 'y';
 const char NO = 'n';
 const char WRONGVAL = '!';
+const int DIGIT = 10;
 
 int findLen(char list[MAXELMNT]);
 char playAgain();
