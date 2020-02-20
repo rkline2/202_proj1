@@ -7,7 +7,7 @@ const char LOSER = 'L';
 const char YES = 'y';
 const char NO = 'n';
 const char WRONGVAL = '!';
-const int DIGIT = 10;
+const int TENDIGIT = 10;
 
 
 void printBoard(int board[MAXROW][MAXCOL]);
@@ -42,14 +42,13 @@ void printBoard(int board[MAXROW][MAXCOL]){
     }
 }
 
-
 int findLen(int testNum) {
     int numdigit = 0;
     if (testNum == 0) {
         numdigit = 1;
     }
     while (testNum > 0){
-        testNum /= DIGIT;
+        testNum /= TENDIGIT;
         ++numdigit;
     }
    
