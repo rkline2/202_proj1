@@ -1,6 +1,3 @@
-
-
-
 const int MAXCHAR = 80;
 const int MAXROW = 4;
 const int MAXCOL = 4;
@@ -18,7 +15,8 @@ void getBoard(char fileName[], int size, int board[MAXROW][MAXCOL]);
 void startGame(int board[MAXROW][MAXCOL]) {
     int selectBoard = 2;
     char fileName[MAXCHAR] = {};
-  
+    int count = 0;
+
     cout << "Welcome to the Fifteen Game" << endl;
     do {
         cout << "Would you like to load a board? \n"
@@ -43,25 +41,20 @@ void startGame(int board[MAXROW][MAXCOL]) {
 
 void getBoard(char fileName[], int size, int board[MAXROW][MAXCOL]) {
     int elmntCount = 0;
-    int selectBoard = 2;
-    int newBoard[MAXROW][MAXCOL] = { {},{},{},{} };
     int boardRow = 0;
     int boardCol = 0;
-    int* boardPtr;
 
     ifstream inputStream;
     inputStream.open(fileName);
     while (elmntCount <= size) {
         if (boardCol < MAXCOL && boardRow < MAXROW) {
             inputStream >> board[boardRow][boardCol];
-            boardPtr = &board[boardRow][boardCol];
             boardCol++;
         }
         else if (boardCol >= MAXCOL && boardRow < MAXROW) {
             boardRow++;
             boardCol = 0;
             inputStream >> board[boardRow][boardCol];
-            boardPtr = &board[boardRow][boardCol];
             boardCol++;
         }
         elmntCount++;
