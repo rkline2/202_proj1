@@ -7,7 +7,7 @@ const char LOSER = 'L';
 const char YES = 'y';
 const char NO = 'n';
 const char WRONGVAL = '!';
-const int DIGIT = 10;
+const int TENDIGIT = 10;
 
 int findLen(char list[MAXELMNT]);
 int findLen(int testNum);
@@ -27,7 +27,7 @@ int findLen(int testNum) {
         numdigit = 1;
     }
     while (testNum > 0){
-        testNum /= DIGIT;
+        testNum /= TENDIGIT;
         ++numdigit;
     }
    
