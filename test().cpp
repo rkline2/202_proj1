@@ -25,7 +25,6 @@ char checkWinner(int board[MAXROW][MAXCOL]);
 void makeRand(int board[MAXROW][MAXCOL]);
 bool isValid(int board[MAXROW][MAXCOL], int rand, int maxRow, int maxCol);
 void printBoard(int board[MAXROW][MAXCOL]);
-void test(int board[MAXROW][MAXCOL]);
 void delay(int amnt);
 
 void makeRand(int board[MAXROW][MAXCOL]) {
@@ -79,11 +78,6 @@ void printBoard(int board[MAXROW][MAXCOL]) {
         }
     }
     cout << endl;
-}
-
-void test(int board[MAXROW][MAXCOL]) {
-    srand(time(NULL));
-    board[0][0] = rand() % (15 + 1);
 }
 
 int main()
