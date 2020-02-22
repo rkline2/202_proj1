@@ -22,14 +22,8 @@ void playGame(int board[MAXROW][MAXCOL]) {
     printBoard(board);
     char isWinner = checkWinner(board);
     while (isWinner == LOSER) {
-        selectTile(board);
-        if (checkDirection(board)) {
-            swapTile(board);
-        }
-        else {
-            cout << "Incorrect value" << endl;
-        }
         printBoard(board);
+        selectTile(board);
     }
     cout << "Winner!" << endl;
 }
