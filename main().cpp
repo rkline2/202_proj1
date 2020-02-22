@@ -39,6 +39,7 @@ void getBoard(char fileName[], int size, int board[MAXROW][MAXCOL]);
 char checkWinner(int board[MAXROW][MAXCOL]);
 void playGame(int board[MAXROW][MAXCOL]);
 int findLen(char list[MAXELMNT]);
+int findLen(int testNum);
 char playAgain();
 char findLocation(int usrRow, int usrCol);
 
