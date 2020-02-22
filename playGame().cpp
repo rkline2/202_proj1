@@ -22,6 +22,9 @@ void playGame(int board[MAXROW][MAXCOL]) {
     printBoard(board);
     char isWinner = checkWinner(board);
     while (isWinner == LOSER) {
+        if (isWinner == LOSER){
+        cout << "Board is not complete" << endl;
+        }
         printBoard(board);
         selectTile(board);
     }
