@@ -15,3 +15,10 @@ For this effort, we are going to create a game board that the user can manipulat
 The game board will be represented by a two-dimensional grid. The actual implementation of how you want to create the grid is up to your design decisions, but you must meet all requirements listed below for full points.
 
 The user will be able to “slide” any tile to an empty location. If the user tries to slide the tile into a location that is already populated or off of the board, the system will indicate that it is not possible. While we can make the grid of any size, we will start with a standard 4 by 4.
+
+## 3. Overview
+In this project, you will:
+  *	Practice basic C++ syntax including branching structures
+  *	Write a program that calls multiple functions
+  *	Manage a two-dimensional array
+  *	Use simple file input/output
